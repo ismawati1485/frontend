@@ -1,0 +1,243 @@
+/* General resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0; 
+    padding: 0; 
+    height: 100%;
+    position: relative; 
+
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5; 
+    z-index: -1; 
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header styles */
+header {
+
+    padding: 20px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; /* Menjaga elemen sejajar secara vertikal */
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+.logo h1 {
+    margin:0;
+    padding:0;
+}
+nav ul {
+    list-style-type: none;
+    display: flex; /* Menjadikan elemen anak sejajar dalam satu baris */
+    gap: 20px;
+    justify-content: flex-start; 
+    padding: 0; 
+    margin: 0; 
+
+} 
+
+nav ul li {
+    margin: 0; 
+}
+
+nav ul {
+    list-style-type: none;
+    float: right;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* Main Section */
+.main {
+    padding: 60px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('img/bgmakanan.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+.main-content {
+    width: 50%;
+}
+
+.main-content h2 {
+        display: inline-block; 
+        font-size: 3em; 
+        white-space: nowrap; /* Mencegah teks berpindah ke baris berikutnya */
+    font-size: 3em;
+        color: #000; 
+    }
+    .highlighted-text {
+        color: #FDBA12; 
+    }
+
+.main-content p {
+    font-size: 1.2em;
+    color: #000000;
+    margin-bottom: 20px;
+}
+.custom-box {
+    width: 28cm; 
+    height: 10cm; 
+    border: 2px solid #FDBA12; 
+    border-radius: 15px; 
+    margin:0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    background-image: url('img/bgmakanan.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+   
+}
+
+.custom-box h1 {
+    margin-bottom: 10px;
+    font-size: 2em;
+
+}
+
+.custom-box p{
+    font-size: 1.2em;
+    line-height: 1.5;
+    max-width: 80%;
+    word-wrap: break-word;
+    text-align: center;
+    margin:0;
+}
+.search-box{
+    display:flex;
+    align-items: center;
+    border:2px solid #FDBA12;
+    border-radius:25px;
+    background-color: #fff;
+    padding: 5px 10 px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1)
+}
+
+.search-box input {
+    border:none;
+    outline:none;
+    font-size: 1em;
+    color :#FDBA12;
+    background: none;
+    padding:5px;
+    flex:1;
+}
+
+.search-box button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.search-box img {
+    width: 40px;
+    height: 40px;
+    position:relative;
+    top: 3px;
+    left:-5px;
+}
+
+
+/* Footer styles */
+footer {
+    background-color: white;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1em;
+    footer {
+        background-color: #000000;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+    }
+    
+    footer .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap; /* Agar tetap responsif */
+    }
+    
+    .footer-logo img {
+        margin-bottom: 10px;
+    }
+    
+    .contact-info {
+        margin-bottom: 10px;
+    }
+    
+    .social-media a {
+        margin: 0 10px;
+    }
+    
+    .social-media img {
+        vertical-align: middle;
+    }
+    
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-content {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .main-image img {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
